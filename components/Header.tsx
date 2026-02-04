@@ -12,14 +12,14 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 mx-auto bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl flex items-center justify-between w-full mx-auto">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <div className="text-[#047857]">
             <MdBolt size={30} />
           </div>
           <span className="text-xl md:text-2xl font-extrabold text-[#047857] tracking-tight">
             CleanSpark
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
