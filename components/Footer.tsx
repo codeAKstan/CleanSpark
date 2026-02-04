@@ -6,13 +6,13 @@ import { HiPaperAirplane } from "react-icons/hi2";
 import { MdBolt } from "react-icons/md";
 
 const contacts = [
-  { id: 1, icon: <BsGlobeEuropeAfrica size={20}/> },
-  { id: 2, icon: <LuAtSign size={20}/> },
-  { id: 3, icon: <BsFillTelephoneFill/> },
+  { id: 1, icon: <BsGlobeEuropeAfrica size={20} /> },
+  { id: 2, icon: <LuAtSign size={20} /> },
+  { id: 3, icon: <BsFillTelephoneFill /> },
 ];
 export default function Footer() {
   return (
-    <footer className="bg-white pt-16 pb-8 border-t border-gray-100">
+    <footer className="bg-white pt-12 md:pt-16 pb-8 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -100,13 +100,13 @@ export default function Footer() {
             <p className="text-sm md:text-base text-gray-500 mb-4">
               Get the latest news on clean energy projects and offers.
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 w-full">
               <input
                 type="email"
                 placeholder="Email address"
-                className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#047857]"
+                className="flex-1 min-w-0 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#047857]"
               />
-              <button className="bg-[#047857] hover:cursor-pointer hover:bg-[#036c4e] text-white p-2 rounded-lg transition-colors">
+              <button className="shrink-0 bg-[#047857] hover:cursor-pointer hover:bg-[#036c4e] text-white p-2 rounded-lg transition-colors">
                 <HiPaperAirplane size={25} />
               </button>
             </div>

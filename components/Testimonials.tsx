@@ -19,7 +19,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-green-50/70 mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <section className="bg-green-50/70 mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">

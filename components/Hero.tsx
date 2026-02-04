@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full max-w-7xl mx-auto pt-40 py-24 px-4 sm:px-6 lg:px-8">
-      <div className="relative h-156 w-full rounded-3xl overflow-hidden">
+    <section className="relative w-full max-w-7xl mx-auto pt-28 md:pt-40 py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="relative min-h-[500px] md:h-156 w-full rounded-3xl overflow-hidden">
         {/* Background Image */}
         <Image
           src="/hero_image.png"
