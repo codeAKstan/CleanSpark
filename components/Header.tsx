@@ -23,10 +23,10 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
-          <Link href="#" className="hover:text-[#047857]">
+          <Link href="/" className="hover:text-[#047857]">
             Home
           </Link>
-          <Link href="#" className="hover:text-[#047857]">
+          <Link href="/shop" className="hover:text-[#047857]">
             Shop
           </Link>
           <Link href="#" className="hover:text-[#047857]">
@@ -90,7 +90,7 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="#"
+              href="/shop"
               className="text-gray-600 font-semibold hover:text-[#047857]"
               onClick={() => setIsMenuOpen(false)}
             >
