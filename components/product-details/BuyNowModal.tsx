@@ -13,18 +13,18 @@ const BuyNowModal: React.FC<BuyNowModalProps> = ({ isOpen, onClose, productName 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-4xl relative overflow-hidden animate-in fade-in zoom-in duration-200">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-4xl relative overflow-hidden animate-in fade-in zoom-in duration-200 flex flex-col max-h-[90vh]">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors z-10"
           aria-label="Close modal"
         >
           <X className="w-6 h-6" />
         </button>
 
-        <div className="p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Buy Now</h2>
+        <div className="p-6 md:p-12 text-center overflow-y-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Buy Now</h2>
           
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto font-medium">
             Easy payments. Transparent pricing. CleanSpark service you can rely on.
