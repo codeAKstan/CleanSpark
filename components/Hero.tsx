@@ -32,10 +32,10 @@ export default function Hero() {
             and high-performance solar solutions.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-[#047857] hover:bg-[#036c4e] text-white text-base md:text-lg font-bold py-3 px-8 md:py-5 md:px-10 rounded-xl transition-colors">
+            <button className="bg-[#047857] hover:cursor-pointer hover:bg-[#036c4e] text-white text-base md:text-lg font-bold py-3 px-8 md:py-5 md:px-10 rounded-xl transition-colors">
               Get Solar Now
             </button>
-            <button className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-base md:text-lg font-bold py-3 px-8 md:py-5 md:px-10 rounded-xl border border-white/30 transition-colors">
+            <button className="bg-white/10 hover:cursor-pointer hover:bg-white/20 backdrop-blur-sm text-white text-base md:text-lg font-bold py-3 px-8 md:py-5 md:px-10 rounded-xl border border-white/30 transition-colors">
               Watch Our Story
             </button>
           </div>
