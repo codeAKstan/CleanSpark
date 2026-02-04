@@ -33,11 +33,13 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section className="mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <section className="mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div className=" max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">Our Solutions</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Our Solutions
+            </h2>
             <p className="text-gray-500 mt-2">
               Tailored energy products for every need
             </p>

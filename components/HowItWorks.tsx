@@ -24,10 +24,10 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
         {/* Steps */}
         <div className="flex-1 space-y-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8 md:mb-12">
             How It Works
           </h2>
           {steps.map((step) => (
@@ -57,7 +57,7 @@ export default function HowItWorks() {
 
         {/* Image */}
         <div className="flex-1 w-full relative">
-          <div className="relative h-200 w-full max-w-lg mx-auto lg:ml-auto rounded-3xl overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
+          <div className="relative h-64 sm:h-96 lg:h-200 w-full max-w-lg mx-auto lg:ml-auto rounded-3xl overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
             <Image
               src="/solar_panels_closeup_1770199481613.png"
               alt="Solar Panel Installation"
