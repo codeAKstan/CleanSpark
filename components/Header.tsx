@@ -45,9 +45,12 @@ export default function Header() {
           <button className="text-gray-500 hover:cursor-pointer hover:text-[#047857]">
             <IoMdSearch size={25} />
           </button>
-          <button className="bg-[#047857] hover:cursor-pointer hover:bg-[#036c4e] text-white font-semibold py-3 px-8 rounded-full transition-colors">
+          <Link
+            href="/shop"
+            className="bg-[#047857] hover:cursor-pointer hover:bg-[#036c4e] text-white font-semibold py-3 px-8 rounded-full transition-colors"
+          >
             Get Solar Now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -122,9 +125,13 @@ export default function Header() {
                 <IoMdSearch size={20} />
                 <span>Search</span>
               </button>
-              <button className="bg-[#047857] text-white font-semibold py-3 px-6 rounded-full w-full text-center">
+              <Link
+                href="/shop"
+                className="bg-[#047857] text-white font-semibold py-3 px-6 rounded-full w-full text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Get Solar Now
-              </button>
+              </Link>
             </div>
           </div>
         )}

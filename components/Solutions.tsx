@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 
 const solutions = [
   {
+    id: "1",
     title: "Portable Lanterns",
     tag: "STARTING $40",
     tagColor: "bg-green-100 text-[#047857]",
@@ -12,6 +14,7 @@ const solutions = [
     cta: "Details",
   },
   {
+    id: "2",
     title: "Home Systems",
     tag: "FROM $500",
     tagColor: "bg-green-100 text-[#047857]",
@@ -21,6 +24,7 @@ const solutions = [
     cta: "Details",
   },
   {
+    id: "3",
     title: "Business Continuity",
     tag: "CONTACT US",
     tagColor: "bg-green-100 text-[#047857]",
@@ -83,9 +87,12 @@ export default function Solutions() {
                 {item.description}
               </p>
 
-              <button className=" m-auto mx-6 mb-6 font-bold bg-gray-100 group-hover:bg-[#047857] group-hover:text-white hover:cursor-pointer text-gray-900 py-2 rounded-lg transition-colors ease-in-out duration-300 text-sm md:text-base">
+              <Link
+                href={`/shop/${item.id}`}
+                className="block w-fit mx-6 mb-6 font-bold bg-gray-100 group-hover:bg-[#047857] group-hover:text-white hover:cursor-pointer text-gray-900 py-2 px-6 rounded-lg transition-colors ease-in-out duration-300 text-sm md:text-base text-center"
+              >
                 {item.cta}
-              </button>
+              </Link>
             </div>
           ))}
         </div>
