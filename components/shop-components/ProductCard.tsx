@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Product } from "@/lib/types";
 
 interface ProductCardProps {
@@ -15,14 +16,14 @@ const badgeColors = {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-slate-100 flex flex-col h-full">
+    <div className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-slate-100 flex flex-col h-full group">
       {/* Image Container */}
-      <div className="relative h-48 sm:h-56 w-full bg-slate-50">
+      <Link href={`/shop/${product.id}`} className="block relative h-48 sm:h-56 w-full bg-slate-50 overflow-hidden">
         <Image
           src={product.image}
           alt={product.title}
           fill
-          className="object-contain p-4"
+          className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
         />
         {/* Badges */}
         {product.badges && (
@@ -39,14 +40,16 @@ export function ProductCard({ product }: ProductCardProps) {
             ))}
           </div>
         )}
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="p-5 flex flex-col flex-grow">
         <div className="flex justify-between items-start mb-2 gap-2">
-          <h3 className="font-bold text-slate-900 text-lg leading-tight">
-            {product.title}
-          </h3>
+          <Link href={`/shop/${product.id}`} className="hover:text-emerald-700 transition-colors">
+            <h3 className="font-bold text-slate-900 text-lg leading-tight">
+              {product.title}
+            </h3>
+          </Link>
           <span className="text-emerald-700 font-bold whitespace-nowrap text-sm">
             {product.price}
           </span>
@@ -56,9 +59,12 @@ export function ProductCard({ product }: ProductCardProps) {
           {product.description}
         </p>
 
-        <button className="w-full py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg transition-colors text-sm">
+        <Link 
+          href={`/shop/${product.id}`}
+          className="w-full py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg transition-colors text-sm text-center block"
+        >
           {product.ctaText}
-        </button>
+        </Link>
       </div>
     </div>
   );
