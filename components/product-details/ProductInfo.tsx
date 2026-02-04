@@ -1,12 +1,17 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Product } from "@/lib/types";
-import { Star, Check, Zap, ShieldCheck, ShoppingCart, MessageCircle } from "lucide-react";
+import { Star, Check, Zap, MessageCircle } from "lucide-react";
+import BuyNowModal from "./BuyNowModal";
 
 interface ProductInfoProps {
   product: Product;
 }
 
 export function ProductInfo({ product }: ProductInfoProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="flex flex-col h-full">
       {/* Badge */}
@@ -83,15 +88,21 @@ export function ProductInfo({ product }: ProductInfoProps) {
 
       {/* Actions */}
       <div className="flex gap-4 mb-6">
-        <button className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+        >
           <Zap className="w-5 h-5" />
           Buy Now
         </button>
-        <button className="flex-1 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
-          <ShoppingCart className="w-5 h-5" />
-          Add to Cart
-        </button>
       </div>
+
+      {/* Buy Now Modal */}
+      <BuyNowModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        productName={product.title} 
+      />
 
       {/* Trust Signals */}
       <div className="flex items-center gap-6 text-xs text-slate-500 font-medium">
