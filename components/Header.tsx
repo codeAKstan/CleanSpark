@@ -35,7 +35,7 @@ export default function Header() {
           <Link href="#" className="hover:text-[#047857]">
             About Us
           </Link>
-          <Link href="#" className="hover:text-[#047857]">
+          <Link href="/support" className="hover:text-[#047857]">
             Support
           </Link>
         </nav>
@@ -114,7 +114,7 @@ export default function Header() {
               About Us
             </Link>
             <Link
-              href="#"
+              href="/support"
               className="text-gray-600 font-semibold hover:text-[#047857]"
               onClick={() => setIsMenuOpen(false)}
             >
