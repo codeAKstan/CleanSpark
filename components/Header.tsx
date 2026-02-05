@@ -26,11 +26,11 @@ export default function Header() {
           <Link href="/" className="hover:text-[#047857]">
             Home
           </Link>
+         <Link href="/solar-home-systems" className="hover:text-[#047857]">
+            Products
+          </Link>
           <Link href="/shop" className="hover:text-[#047857]">
             Shop
-          </Link>
-          <Link href="#" className="hover:text-[#047857]">
-            Monitoring
           </Link>
           <Link href="#" className="hover:text-[#047857]">
             About Us
@@ -42,9 +42,9 @@ export default function Header() {
 
         {/* Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="text-gray-500 hover:cursor-pointer hover:text-[#047857]">
+          {/* <button className="text-gray-500 hover:cursor-pointer hover:text-[#047857]">
             <IoMdSearch size={25} />
-          </button>
+          </button> */}
           <Link
             href="/shop"
             className="bg-[#047857] hover:cursor-pointer hover:bg-[#036c4e] text-white font-semibold py-3 px-8 rounded-full transition-colors"
@@ -91,6 +91,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Home
+            </Link>
+            <Link
+              href="/solar-home-systems"
+              className="text-gray-600 font-semibold hover:text-[#047857]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Products
             </Link>
             <Link
               href="/shop"
