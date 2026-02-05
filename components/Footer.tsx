@@ -45,22 +45,22 @@ export default function Footer() {
             <h4 className="font-bold text-gray-900 mb-6">Our Solutions</h4>
             <ul className="space-y-4 text-sm md:text-base text-gray-600">
               <li>
-                <Link href="#" className="hover:text-[#047857]">
+                <Link href="/shop/1" className="hover:text-[#047857]">
                   Portable Lanterns
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-[#047857]">
+                <Link href="/shop/2" className="hover:text-[#047857]">
                   Home Solar Systems
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-[#047857]">
+                <Link href="/shop/3" className="hover:text-[#047857]">
                   Business Continuity
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-[#047857]">
+                <Link href="/support" className="hover:text-[#047857]">
                   Custom Installations
                 </Link>
               </li>
@@ -72,7 +72,7 @@ export default function Footer() {
             <h4 className="font-bold text-gray-900 mb-6">Resources</h4>
             <ul className="space-y-4 text-sm md:text-base text-gray-600">
               <li>
-                <Link href="#" className="hover:text-[#047857]">
+                <Link href="/support" className="hover:text-[#047857]">
                   Help Center
                 </Link>
               </li>
