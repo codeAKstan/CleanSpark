@@ -87,51 +87,33 @@ export default function Header() {
           <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-lg md:hidden flex flex-col p-4 space-y-4">
             <Link
               href="#"
-              className="text-gray-600 font-semibold hover:text-[#047857]"
+              className="text-gray-500 font-semibold hover:text-[#047857]"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
-              href="/solar-home-systems"
-              className="text-gray-600 font-semibold hover:text-[#047857]"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Products
-            </Link>
-            <Link
               href="/shop"
-              className="text-gray-600 font-semibold hover:text-[#047857]"
+              className="text-gray-500 font-semibold hover:text-[#047857]"
               onClick={() => setIsMenuOpen(false)}
             >
               Shop
             </Link>
             <Link
-              href="#"
-              className="text-gray-600 font-semibold hover:text-[#047857]"
+              href="/solar-home-systems"
+              className="text-gray-500 font-semibold hover:text-[#047857]"
               onClick={() => setIsMenuOpen(false)}
             >
-              Monitoring
+              For Homes
             </Link>
             <Link
               href="/about-us"
-              className="text-gray-600 font-semibold hover:text-[#047857]"
+              className="text-gray-500 font-semibold hover:text-[#047857]"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
-            <Link
-              href="/support"
-              className="text-gray-600 font-semibold hover:text-[#047857]"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Support
-            </Link>
             <div className="flex flex-col gap-3 pt-4 border-t border-gray-100">
-              <button className="flex items-center gap-2 text-gray-500 hover:text-[#047857]">
-                <IoMdSearch size={20} />
-                <span>Search</span>
-              </button>
               <Link
                 href="/shop"
                 className="bg-[#047857] text-white font-semibold py-3 px-6 rounded-full w-full text-center"
