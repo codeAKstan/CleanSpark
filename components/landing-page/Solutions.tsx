@@ -89,7 +89,7 @@ export default function Solutions() {
 
               <Link
                 href={`/shop/${item.id}`}
-                className="block w-fit mx-6 mb-6 font-bold bg-gray-100 group-hover:bg-[#047857] group-hover:text-white hover:cursor-pointer text-gray-900 py-2 px-6 rounded-lg transition-colors ease-in-out duration-300 text-sm md:text-base text-center"
+                className="block m-auto mx-6 mb-6 font-bold text-white bg-[#047857] md:bg-gray-100 group-hover:bg-[#047857] group-hover:text-white hover:cursor-pointer md:text-gray-900 py-2 px-6 rounded-lg transition-colors ease-in-out duration-300 text-sm md:text-base text-center"
               >
                 {item.cta}
               </Link>

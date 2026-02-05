@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative w-full max-w-7xl mx-auto pt-28 md:pt-40 py-12 md:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="relative min-h-[500px] md:h-156 w-full rounded-3xl overflow-hidden">
+      <div className="relative min-h-125 md:h-156 w-full rounded-3xl overflow-hidden">
         {/* Background Image */}
         <Image
           src="/hero_image.png"
@@ -39,7 +39,7 @@ export default function Hero() {
             >
               Get Solar Now
             </Link>
-            <button className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-base md:text-lg font-bold py-3 px-8 md:py-5 md:px-10 rounded-xl border border-white/30 transition-colors">
+            <button className="bg-white/10 hover:cursor-pointer hover:bg-white/20 backdrop-blur-sm text-white text-base md:text-lg font-bold py-3 px-8 md:py-5 md:px-10 rounded-xl border border-white/30 transition-colors">
               Watch Our Story
             </button>
           </div>
