@@ -23,7 +23,7 @@ function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/family.png"
+          src="/forhome-hero.jpeg"
           alt="Solar Home Systems"
           fill
           className="object-cover brightness-50"
