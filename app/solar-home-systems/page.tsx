@@ -64,8 +64,8 @@ function InfoSection() {
           </p>
           <p className="text-gray-600 text-lg mb-8 leading-relaxed">
             Designed for customers with no or unreliable electrical grid access
-            and offering basic electricity, these systems provide essential light
-            and power to homes and businesses across the continent.
+            and offering basic electricity, these systems provide essential
+            light and power to homes and businesses across the continent.
           </p>
           <Link
             href="/shop"
@@ -93,42 +93,42 @@ function ProductsSection() {
       title: "HomePlus",
       description: "Ultra-affordable solar lighting and basic phone charging.",
       image: "/HomePlus.png",
-      link: "/shop/1",
+      link: "/shop/7",
     },
     {
       title: "HomePlus Pro",
       description:
         "Comprehensive lighting and smartphone charging with upgraded capacity.",
       image: "/HomePlus_pro.png",
-      link: "/shop/2",
+      link: "/shop/8",
     },
     {
       title: "HomePlus Max",
       description:
         "Powerful solar lighting and laptop charging, battery chargeable by solar or grid power.",
       image: "/HomePlus_max.png",
-      link: "/shop/3",
+      link: "/shop/2",
     },
     {
       title: "Solar TV Bundle",
       description:
         "Powerful solar lighting and a solar powered 24'' HD TV bundle.",
       image: "/tv.png",
-      link: "/shop",
+      link: "/shop/9",
     },
     {
-      title: "18\" Solar Fan",
+      title: '18" Solar Fan',
       description:
         "Lightweight and portable solar fan with standalone solar panel and robust battery.",
       image: "/Solar_fan.png",
-      link: "/shop/5",
+      link: "/shop/10",
     },
     {
-      title: "Max + 32\" TV + Fan",
+      title: 'Max + 32" TV + Fan',
       description:
         "Our complete premium package for ultimate comfort and entertainment.",
       image: "/32tv.png",
-      link: "/shop/3",
+      link: "/shop/4",
     },
   ];
 
