@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CTA() {
   return (
     <section className="bg-[#117A5E] py-12 md:py-20 px-4 sm:px-6 lg:px-8 text-center">
@@ -9,9 +11,12 @@ export default function CTA() {
           Partner with us to accelerate Africa&apos;s transition to renewable
           energy.
         </p>
-        <button className="bg-white hover:cursor-pointer text-[#047857] md:text-lg font-bold py-3 px-8 md:py-4 md:px-10 rounded-xl hover:bg-green-50 transition-colors shadow-lg">
+        <Link
+          href="/support"
+          className="inline-block bg-white hover:cursor-pointer text-[#047857] md:text-lg font-bold py-3 px-8 md:py-4 md:px-10 rounded-xl hover:bg-green-50 transition-colors shadow-lg"
+        >
           Get In Touch
-        </button>
+        </Link>
       </div>
     </section>
   );

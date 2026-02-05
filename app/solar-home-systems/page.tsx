@@ -92,43 +92,43 @@ function ProductsSection() {
     {
       title: "HomePlus",
       description: "Ultra-affordable solar lighting and basic phone charging.",
-      image: "/HomePlus.png",
+      images: ["/HomePlus.png"],
       link: "/shop/1",
     },
     {
       title: "HomePlus Pro",
       description:
         "Comprehensive lighting and smartphone charging with upgraded capacity.",
-      image: "/HomePlus_pro.png",
+      images: ["/HomePlus_pro.png"],
       link: "/shop/2",
     },
     {
       title: "HomePlus Max",
       description:
         "Powerful solar lighting and laptop charging, battery chargeable by solar or grid power.",
-      image: "/HomePlus_max.png",
-      link: "/shop/3",
+      images: ["/HomePlus_max.png"],
+      link: "/shop/7",
     },
     {
       title: "Solar TV Bundle",
       description:
         "Powerful solar lighting and a solar powered 24'' HD TV bundle.",
-      image: "/tv.png",
-      link: "/shop",
+      images: ["/tv.png"],
+      link: "/shop/8",
     },
     {
       title: "18\" Solar Fan",
       description:
         "Lightweight and portable solar fan with standalone solar panel and robust battery.",
-      image: "/Solar_fan.png",
-      link: "/shop/5",
+      images: ["/Solar_fan.png"],
+      link: "/shop/9",
     },
     {
       title: "Max + 32\" TV + Fan",
       description:
         "Our complete premium package for ultimate comfort and entertainment.",
-      image: "/32tv.png",
-      link: "/shop/3",
+      images: ["/32tv.png", "/fan.png"],
+      link: "/shop/10",
     },
   ];
 
@@ -149,13 +149,17 @@ function ProductsSection() {
               key={index}
               className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center"
             >
-              <div className="relative w-full h-48 mb-6 bg-gray-100 rounded-xl overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-contain p-4"
-                />
+              <div className="relative w-full h-48 mb-6 bg-gray-100 rounded-xl overflow-hidden flex p-4 gap-2">
+                {product.images.map((img, i) => (
+                  <div key={i} className="relative flex-1 h-full">
+                    <Image
+                      src={img}
+                      alt={`${product.title} - Image ${i + 1}`}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                ))}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 {product.title}

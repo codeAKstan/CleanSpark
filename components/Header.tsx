@@ -26,11 +26,11 @@ export default function Header() {
           <Link href="/" className="hover:text-[#047857]">
             Home
           </Link>
-         <Link href="/solar-home-systems" className="hover:text-[#047857]">
-            Products
-          </Link>
           <Link href="/shop" className="hover:text-[#047857]">
             Shop
+          </Link>
+         <Link href="/solar-home-systems" className="hover:text-[#047857]">
+            For Homes
           </Link>
           <Link href="#" className="hover:text-[#047857]">
             About Us
