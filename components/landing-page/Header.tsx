@@ -113,6 +113,13 @@ export default function Header() {
             >
               About Us
             </Link>
+            <Link
+              href="/support"
+              className="text-gray-500 font-semibold hover:text-[#047857]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Support
+            </Link>
             <div className="flex flex-col gap-3 pt-4 border-t border-gray-100">
               <Link
                 href="/shop"
