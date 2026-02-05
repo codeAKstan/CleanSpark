@@ -26,13 +26,13 @@ export default function Header() {
           <Link href="/" className="hover:text-[#047857]">
             Home
           </Link>
-         <Link href="/solar-home-systems" className="hover:text-[#047857]">
-            Products
-          </Link>
           <Link href="/shop" className="hover:text-[#047857]">
             Shop
           </Link>
-          <Link href="#" className="hover:text-[#047857]">
+          <Link href="/solar-home-systems" className="hover:text-[#047857]">
+            For Homes
+          </Link>
+          <Link href="/about-us" className="hover:text-[#047857]">
             About Us
           </Link>
           <Link href="/support" className="hover:text-[#047857]">
@@ -114,7 +114,7 @@ export default function Header() {
               Monitoring
             </Link>
             <Link
-              href="#"
+              href="/about-us"
               className="text-gray-600 font-semibold hover:text-[#047857]"
               onClick={() => setIsMenuOpen(false)}
             >
