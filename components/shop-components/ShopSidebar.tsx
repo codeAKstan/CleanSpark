@@ -66,10 +66,10 @@ export function ShopSidebar({
                     onCategoryChange(category);
                     setIsMobileOpen(false);
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  className={`w-full text-left px-4 py-3 rounded-lg hover:cursor-pointer text-sm font-medium transition-colors ${
                     activeCategory === category
                       ? "bg-[#047857] text-white"
-                      : "text-gray-600 hover:bg-gray-50"
+                      : "text-gray-600 hover:bg-gray-100"
                   }`}
                 >
                   {category}
