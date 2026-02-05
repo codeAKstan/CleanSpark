@@ -36,7 +36,9 @@ export interface Product {
     color: "green" | "blue" | "orange" | "purple";
   }[];
   ctaText: string;
-  
+  category?: string;
+  powerWatts?: number;
+
   // Detailed fields
   rating?: number;
   reviewCount?: number;

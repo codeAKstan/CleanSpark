@@ -18,7 +18,10 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-slate-100 flex flex-col h-full group">
       {/* Image Container */}
-      <Link href={`/shop/${product.id}`} className="block relative h-48 sm:h-56 w-full bg-slate-50 overflow-hidden">
+      <Link
+        href={`/shop/${product.id}`}
+        className="block relative h-48 sm:h-56 w-full bg-slate-50 overflow-hidden"
+      >
         <Image
           src={product.image}
           alt={product.title}
@@ -44,27 +47,26 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* Content */}
       <div className="p-5 flex flex-col flex-grow">
-        <div className="flex justify-between items-start mb-2 gap-2">
-          <Link href={`/shop/${product.id}`} className="hover:text-emerald-700 transition-colors">
-            <h3 className="font-bold text-slate-900 text-lg leading-tight">
-              {product.title}
-            </h3>
-          </Link>
-          <span className="text-emerald-700 font-bold whitespace-nowrap text-sm">
+        <Link href={`/shop/${product.id}`} className="block mb-2">
+          <h3 className="font-bold text-gray-900 text-lg leading-tight mb-1 hover:text-[#047857] transition-colors">
+            {product.title}
+          </h3>
+          <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
+            {product.description}
+          </p>
+        </Link>
+
+        <div className="mt-auto flex items-center justify-between pt-4">
+          <span className="text-gray-900 font-bold text-lg">
             {product.price}
           </span>
+          <Link
+            href={`/shop/${product.id}`}
+            className="bg-[#047857] hover:bg-[#036c4e] text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors"
+          >
+            View Details
+          </Link>
         </div>
-        
-        <p className="text-slate-500 text-sm mb-6 flex-grow">
-          {product.description}
-        </p>
-
-        <Link 
-          href={`/shop/${product.id}`}
-          className="w-full py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg transition-colors text-sm text-center block"
-        >
-          {product.ctaText}
-        </Link>
       </div>
     </div>
   );
