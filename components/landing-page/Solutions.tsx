@@ -60,7 +60,7 @@ export default function Solutions() {
         {solutions.map((item, index) => (
           <div
             key={index}
-            className={`group hover-lift bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm ${
+            className={`group hover-lift bg-white border border-slate-200 rounded-b-3xl overflow-hidden shadow-sm ${
               index === 2
                 ? "lg:col-span-1 md:col-span-2 lg:md:col-span-1"
                 : ""

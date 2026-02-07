@@ -79,9 +79,9 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full max-w-7xl mx-auto pt-28 md:pt-40 py-12 md:py-20 px-4 sm:px-6 lg:px-8"
+      className="relative w-full h-screen"
     >
-      <div className="relative min-h-[600px] w-full rounded-3xl overflow-hidden flex items-center shadow-2xl bg-slate-900">
+      <div className="relative w-full h-full overflow-hidden flex items-center bg-slate-900 pt-20 md:pt-32">
         {/* Background Image */}
         <Image
           src="/house.png"
@@ -97,33 +97,35 @@ export default function Hero() {
         {/* Content */}
         <div
           ref={textRef}
-          className="relative z-10 p-8 md:p-20 max-w-3xl"
+          className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-8 md:p-20"
         >
-          <h1
-            ref={titleRef}
-            className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 flex flex-col"
-          >
-            <span className="hero-title-line block">Clean Energy.</span>
-            <span className="hero-title-line block">Reliable Power.</span>
-            <span className="hero-title-line block">Smarter Living.</span>
-          </h1>
-          <p
-            ref={descRef}
-            className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed max-w-xl opacity-90"
-          >
-            Powering African homes and businesses with sustainable, affordable,
-            and high-performance solar solutions.
-          </p>
-          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/shop"
-              className="btn-scale bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#117a5e]/25 transition-all text-center"
+          <div className="max-w-3xl">
+            <h1
+              ref={titleRef}
+              className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 flex flex-col"
             >
-              Get Solar Now
-            </Link>
-            <button className="btn-scale bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all">
-              Watch Our Story
-            </button>
+              <span className="hero-title-line block">Clean Energy.</span>
+              <span className="hero-title-line block">Reliable Power.</span>
+              <span className="hero-title-line block">Smarter Living.</span>
+            </h1>
+            <p
+              ref={descRef}
+              className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed max-w-xl opacity-90"
+            >
+              Powering African homes and businesses with sustainable, affordable,
+              and high-performance solar solutions.
+            </p>
+            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/shop"
+                className="btn-scale bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#117a5e]/25 transition-all text-center"
+              >
+                Get Solar Now
+              </Link>
+              <button className="btn-scale bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all">
+                Locate Us
+              </button>
+            </div>
           </div>
         </div>
       </div>
