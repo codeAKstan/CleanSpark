@@ -122,9 +122,11 @@ export default function Hero() {
               >
                 Get Solar Now
               </Link>
-              <button className="btn-scale bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all">
-                Locate Us
-              </button>
+              <Link href="/locate-us">
+                <button className="btn-scale bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all cursor-pointer">
+                  Locate Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>
