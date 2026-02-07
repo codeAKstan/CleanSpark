@@ -9,57 +9,63 @@ const features = [
     icon: <HiCheckBadge size={30} />,
     description:
       "99.9% uptime for your peace of mind and constant productivity.",
+    delay: "animation-delay-none",
   },
   {
     title: "24/7 Support",
     icon: <MdOutlineSupportAgent size={30} />,
     description:
-      "Local and key advisors whenever you need it from our expert technicians.",
+      "Localized help whenever you need it from our expert technicians.",
+    delay: "[animation-delay:100ms]",
   },
   {
     title: "Flexible Pay",
     icon: <FaMoneyBills size={30} />,
     description:
-      "Investment plans tailored for you, making green energy accessible to all.",
+      "Installment plans tailored for you, making green energy accessible to all.",
+    delay: "[animation-delay:200ms]",
   },
   {
     title: "Eco-Friendly",
     icon: <FaLeaf size={30} />,
     description:
-      "Green energy for a better future, reducing carbon footprint across the continent.",
+      "Clean energy for a better future, reducing carbon footprint across the continent.",
+    delay: "[animation-delay:300ms]",
   },
 ];
 
 export default function WhyCleanSpark() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 bg-white">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-          Why CleanSpark?
-        </h2>
-        <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-          We&apos;re more than just a solar company. We are your partner in
-          building a sustainable and reliable future.
-        </p>
-      </div>
+    <section className="bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            Why CleanSpark?
+          </h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            We&apos;re more than just a solar company. We are your partner in
+            building a sustainable and reliable future.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-white p-6 pb-2 rounded-2xl border border-gray-100 shadow-sm transition-transform duration-200 hover:-translate-y-1 flex flex-col items-center text-center"
-          >
-            <div className="w-12 h-12 bg-[#047857]/10 text-[#047857] rounded-full flex items-center justify-center mb-4">
-              {feature.icon}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={`group animate-fade-in ${feature.delay} bg-white p-8 rounded-3xl text-center shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300`}
+            >
+              <div className="w-16 h-16 bg-emerald-50 text-[#117a5e] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">
+                {feature.title}
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                {feature.description}
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {feature.description}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

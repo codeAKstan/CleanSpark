@@ -6,96 +6,100 @@ const solutions = [
   {
     id: "1",
     title: "Portable Lanterns",
-    tag: "STARTING $40",
-    tagColor: "bg-green-100 text-[#047857]",
+    tag: "From $49",
+    tagColor: "bg-emerald-100 text-emerald-700",
     description:
       "Bright, reliable lighting that goes wherever you need it. Perfect for off-grid travel or home backup.",
     image: "/lantern_product_1770199426970.png",
-    cta: "Details",
+    cta: "View Details",
   },
   {
     id: "2",
     title: "Home Systems",
-    tag: "FROM $500",
-    tagColor: "bg-green-100 text-[#047857]",
+    tag: "From $599",
+    tagColor: "bg-emerald-100 text-emerald-700",
     description:
       "Full power for your home. Includes panels, batteries, and smart monitoring for total independence.",
     image: "/home_system_mockup_1770199442722.png",
-    cta: "Details",
+    cta: "View Details",
   },
   {
     id: "3",
-    title: "Business Continuity",
-    tag: "CONTACT US",
-    tagColor: "bg-green-100 text-[#047857]",
+    title: "Business Systems",
+    tag: "Contact Us",
+    tagColor: "bg-emerald-100 text-emerald-700",
     description:
       "Scalable energy for commercial operations. Never lose a minute of production to power outages.",
     image: "/business_continuity_1770199467337.png",
-    cta: "Details",
+    cta: "View Details",
   },
 ];
 
 export default function Solutions() {
   return (
-    <section className="mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className=" max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-8">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Our Solutions
-            </h2>
-            <p className="text-gray-500 mt-2">
-              Tailored energy products for every need
-            </p>
-          </div>
-          <a
-            href="#"
-            className="hidden sm:flex items-center text-[#047857] font-semibold hover:underline"
-          >
-            See All Solutions
-            <GoArrowRight />
-          </a>
+    <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+        <div>
+          <h2 className="text-4xl font-extrabold text-gray-900">
+            Our Solutions
+          </h2>
+          <p className="mt-2 text-lg text-slate-600">
+            Tailored energy products for every need
+          </p>
         </div>
+        <a
+          href="#"
+          className="group text-[#117a5e] font-bold hover:underline flex items-center gap-1"
+        >
+          See All Solutions{" "}
+          <GoArrowRight className="group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {solutions.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white flex flex-col group rounded-2xl border border-zinc-200 overflow-hidden hover:shadow-md transition-shadow"
-            >
-              <div className="relative h-48 w-full overflow-hidden bg-gray-100 mb-4">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out"
-                />
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {solutions.map((item, index) => (
+          <div
+            key={index}
+            className={`group hover-lift bg-white border border-slate-200 rounded-b-3xl overflow-hidden shadow-sm ${
+              index === 2
+                ? "lg:col-span-1 md:col-span-2 lg:md:col-span-1"
+                : ""
+            }`}
+          >
+            <div className="h-72 overflow-hidden relative">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+            </div>
 
-              <div className="flex justify-between items-center mb-2 px-6">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900">
+            <div className="p-8">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-2xl font-bold text-gray-900">
                   {item.title}
                 </h3>
                 <span
-                  className={`text-xs font-bold px-2 py-1 rounded-full uppercase ${item.tagColor}`}
+                  className={`${item.tagColor} text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider`}
                 >
                   {item.tag}
                 </span>
               </div>
 
-              <p className="text-sm md:text-base text-gray-500 leading-relaxed mb-6 px-6">
+              <p className="text-slate-600 mb-8 leading-relaxed">
                 {item.description}
               </p>
 
               <Link
                 href={`/shop/${item.id}`}
-                className="block m-auto mx-6 mb-6 font-bold text-white bg-[#047857] md:bg-gray-100 group-hover:bg-[#047857] group-hover:text-white hover:cursor-pointer md:text-gray-900 py-2 px-6 rounded-lg transition-colors ease-in-out duration-300 text-sm md:text-base text-center"
+                className="btn-scale block w-full bg-slate-100 hover:bg-[#117a5e] hover:text-white font-bold py-4 rounded-xl transition-colors text-center text-gray-900"
               >
                 {item.cta}
               </Link>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
