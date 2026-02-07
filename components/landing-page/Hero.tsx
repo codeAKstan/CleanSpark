@@ -1,9 +1,86 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      // Entrance Animation
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%", // Trigger when top of hero hits 80% of viewport
+          toggleActions: "play none restart none", // Replays when scrolling back up
+        },
+      });
+
+      // Animate title lines
+      tl.from(".hero-title-line", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power4.out",
+      })
+        // Animate description
+        .from(
+          descRef.current,
+          {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+          },
+          "-=0.5"
+        )
+        // Animate buttons
+        .from(
+          buttonsRef.current,
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.7"
+        );
+
+      // Scroll Parallax Effect
+      if (textRef.current) {
+        gsap.to(textRef.current, {
+          y: -150, // Move up
+          opacity: 0, // Fade out
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+    },
+    { scope: containerRef }
+  );
+
   return (
-    <section className="relative w-full max-w-7xl mx-auto pt-28 md:pt-40 py-12 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      ref={containerRef}
+      className="relative w-full max-w-7xl mx-auto pt-28 md:pt-40 py-12 md:py-20 px-4 sm:px-6 lg:px-8"
+    >
       <div className="relative min-h-[600px] w-full rounded-3xl overflow-hidden flex items-center shadow-2xl bg-slate-900">
         {/* Background Image */}
         <Image
@@ -18,19 +95,26 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
         {/* Content */}
-        <div className="relative z-10 p-8 md:p-20 max-w-3xl animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-            Clean Energy.
-            <br />
-            Reliable Power.
-            <br />
-            Smarter Living.
+        <div
+          ref={textRef}
+          className="relative z-10 p-8 md:p-20 max-w-3xl"
+        >
+          <h1
+            ref={titleRef}
+            className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 flex flex-col"
+          >
+            <span className="hero-title-line block">Clean Energy.</span>
+            <span className="hero-title-line block">Reliable Power.</span>
+            <span className="hero-title-line block">Smarter Living.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed max-w-xl opacity-90">
+          <p
+            ref={descRef}
+            className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed max-w-xl opacity-90"
+          >
             Powering African homes and businesses with sustainable, affordable,
             and high-performance solar solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/shop"
               className="btn-scale bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#117a5e]/25 transition-all text-center"
