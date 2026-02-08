@@ -96,7 +96,7 @@ export default function Solutions() {
 
               <Link
                 href={item.link}
-                className="btn-scale block w-full bg-slate-100 group-hover:bg-[#117a5e] group-hover:text-white font-bold py-2 rounded-xl transition-colors duration-300 ease-in-out text-center text-gray-900"
+                className="btn-scale block w-full md:bg-slate-100 bg-[#117a5e] group-hover:bg-[#117a5e] group-hover:text-white font-bold py-2 rounded-xl transition-colors duration-300 ease-in-out text-center text-white md:text-gray-900"
               >
                 {item.cta}
               </Link>

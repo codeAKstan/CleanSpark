@@ -19,7 +19,7 @@ export default function SolarHomeSystemsPage() {
 
 function HeroSection() {
   return (
-    <section className="relative h-[600px] w-full flex items-center">
+    <section className="relative h-[650px] w-full flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
