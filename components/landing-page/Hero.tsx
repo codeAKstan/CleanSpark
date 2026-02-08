@@ -79,7 +79,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen"
+      className="relative w-full h-[750]"
     >
       <div className="relative w-full h-full overflow-hidden flex items-center bg-slate-900 pt-20">
         {/* Background Image */}

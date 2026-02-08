@@ -29,7 +29,7 @@ export default function HowItWorks() {
     <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-20 items-center">
         <div className="order-2 lg:order-1">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold text-gray-900 mb-12">
             How It Works
           </h2>
           <div className="space-y-12 relative">
@@ -50,7 +50,7 @@ export default function HowItWorks() {
                   {step.id}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                     {step.title}
                   </h3>
                   <p className="text-slate-600 text-lg">{step.description}</p>
