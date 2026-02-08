@@ -305,6 +305,91 @@ export const products: Product[] = [
     faqs: [],
     howItWorks: [],
   },
+  // 13. Pico Plus
+  {
+    id: "pico-plus",
+    title: "Pico Plus",
+    description:
+      "This affordable solar lantern combines bright lighting and a solar panel in one convenient package.",
+    price: "$25.00",
+    image: "/lantern_product_1770199426970.png",
+    badges: [{ text: "Portable", color: "green" }],
+    ctaText: "View Details",
+    category: "Portable Lanterns",
+    powerWatts: 5,
+    rating: 4.8,
+    reviewCount: 15,
+    dailyYield: "N/A",
+    warranty: "2 Years",
+    longDescription:
+      "The Pico Plus is an entry-level solar lantern perfect for personal lighting needs. Compact, durable, and easy to use.",
+    whatsIncluded: ["Pico Plus Unit", "Integrated Panel"],
+    specs: [
+      { label: "Brightness", value: "50 Lumens" },
+      { label: "Runtime", value: "72 Hours" },
+    ],
+    gallery: ["/lantern_product_1770199426970.png"],
+    reviews: [],
+    faqs: [],
+    howItWorks: [],
+  },
+  // 14. Pro
+  {
+    id: "pro",
+    title: "Pro",
+    description:
+      "Portable, solar-powered lantern with basic phone charging, providing up to 100 hours of light on a single charge.",
+    price: "$45.00",
+    image: "/lantern_product_1770199426970.png",
+    badges: [{ text: "Charging", color: "blue" }],
+    ctaText: "View Details",
+    category: "Portable Lanterns",
+    powerWatts: 10,
+    rating: 4.9,
+    reviewCount: 28,
+    dailyYield: "N/A",
+    warranty: "2 Years",
+    longDescription:
+      "The Pro model adds phone charging capability to the reliable solar lantern design. Stay connected wherever you are.",
+    whatsIncluded: ["Pro Unit", "USB Cable"],
+    specs: [
+      { label: "Brightness", value: "150 Lumens" },
+      { label: "Runtime", value: "100 Hours" },
+      { label: "Phone Charging", value: "Yes" },
+    ],
+    gallery: ["/lantern_product_1770199426970.png"],
+    reviews: [],
+    faqs: [],
+    howItWorks: [],
+  },
+  // 15. Boom
+  {
+    id: "boom",
+    title: "Boom",
+    description:
+      "Versatile solar lantern providing lighting, basic phone charging, music, and radio all in one.",
+    price: "$65.00",
+    image: "/lantern_product_1770199426970.png",
+    badges: [{ text: "Music", color: "purple" }],
+    ctaText: "View Details",
+    category: "Portable Lanterns",
+    powerWatts: 15,
+    rating: 4.7,
+    reviewCount: 42,
+    dailyYield: "N/A",
+    warranty: "2 Years",
+    longDescription:
+      "The Boom is the ultimate entertainment companion. Light up your night and play your favorite tunes with the built-in speaker and radio.",
+    whatsIncluded: ["Boom Unit", "USB Cable", "Antenna"],
+    specs: [
+      { label: "Brightness", value: "200 Lumens" },
+      { label: "Audio", value: "Speaker + FM Radio" },
+    ],
+    gallery: ["/lantern_product_1770199426970.png"],
+    reviews: [],
+    faqs: [],
+    howItWorks: [],
+  },
 ];
 
 export const filterOptions: FilterOption[] = [

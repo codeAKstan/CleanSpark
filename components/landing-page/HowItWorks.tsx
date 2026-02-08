@@ -35,7 +35,7 @@ export default function HowItWorks() {
           <div className="space-y-12 relative">
             {/* Vertical Line */}
             <div className="absolute top-6 left-6 bottom-6 w-0.5 bg-slate-200">
-              <div className="w-full h-3/3 bg-[#117a5e] step-line-glow"></div>
+              <div className="w-full h-3/3 bg-[#117a5e]"></div>
             </div>
 
             {steps.map((step) => (
