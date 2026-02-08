@@ -118,12 +118,12 @@ export default function Hero() {
             <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/shop"
-                className="btn-scale bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#117a5e]/25 transition-all text-center"
+                className="btn-scale w-full md:w-fit bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#117a5e]/25 transition-all text-center"
               >
                 Get Solar Now
               </Link>
               <Link href="/locate-us">
-                <button className="btn-scale bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all cursor-pointer">
+                <button className="btn-scale w-full md:w-fit bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all cursor-pointer">
                   Locate Us
                 </button>
               </Link>
