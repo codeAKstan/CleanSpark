@@ -58,6 +58,13 @@ export default function Header() {
             For Homes
           </Link>
 
+          <Link
+            href="/solar-home-systems"
+            className={navLinkClass("/solar-home-systems")}
+          >
+            Portables
+          </Link>
+
           <Link href="/about-us" className={navLinkClass("/about-us")}>
             About Us
           </Link>

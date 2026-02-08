@@ -42,12 +42,12 @@ export default function PromoSection() {
           </ul>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="btn-scale flex items-center justify-center gap-2 bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-3 px-8 rounded-full transition-all shadow-lg shadow-[#117a5e]/25">
+            <button className="btn-scale hover:cursor-pointer flex items-center justify-center gap-2 bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-3 px-8 rounded-full transition-all shadow-lg shadow-[#117a5e]/25">
               <MdEmail size={24} />
               Free Quote
             </button>
             
-            <button className="btn-scale flex items-center justify-center gap-2 border-2 border-slate-400 hover:border-white hover:bg-white/10 text-white text-lg font-bold py-3 px-8 rounded-full transition-all">
+            <button className="btn-scale hover:cursor-pointer flex items-center justify-center gap-2 border-2 border-slate-400 hover:border-white hover:bg-white/10 text-white text-lg font-bold py-3 px-8 rounded-full transition-all">
               <MdPhone size={24} />
               (08) 6288 7154
             </button>

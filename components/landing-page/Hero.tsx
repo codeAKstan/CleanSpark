@@ -79,12 +79,12 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen"
+      className="relative w-full h-[750]"
     >
-      <div className="relative w-full h-full overflow-hidden flex items-center bg-slate-900 pt-20 md:pt-32">
+      <div className="relative w-full h-full overflow-hidden flex items-center bg-slate-900 pt-20">
         {/* Background Image */}
         <Image
-          src="/house.png"
+          src="/Hero2.png"
           alt="Modern solar home at dusk"
           fill
           className="w-full h-full object-cover"
@@ -92,7 +92,7 @@ export default function Hero() {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-black/50 via-black/30 to-transparent"></div>
 
         {/* Content */}
         <div
@@ -118,12 +118,12 @@ export default function Hero() {
             <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/shop"
-                className="btn-scale bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#117a5e]/25 transition-all text-center"
+                className="btn-scale w-full md:w-fit bg-[#117a5e] hover:bg-emerald-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#117a5e]/25 transition-all text-center"
               >
                 Get Solar Now
               </Link>
               <Link href="/locate-us">
-                <button className="btn-scale bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all cursor-pointer">
+                <button className="btn-scale w-full md:w-fit bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-lg font-bold py-4 px-10 rounded-xl transition-all cursor-pointer">
                   Locate Us
                 </button>
               </Link>

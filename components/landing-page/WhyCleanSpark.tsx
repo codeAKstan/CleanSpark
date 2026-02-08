@@ -39,7 +39,7 @@ export default function WhyCleanSpark() {
     <section className="bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold text-gray-900 mb-4">
             Why CleanSpark?
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">

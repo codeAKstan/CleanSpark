@@ -1,11 +1,13 @@
 import { FaPlay } from "react-icons/fa";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[600px] flex items-center justify-center text-white">
+    <section className="relative h-150 flex items-center justify-center text-white">
       <div className="absolute inset-0">
-        <img
-          src="/about-hero.jpeg"
+        <Image
+          fill
+          src="/Hero2.jpeg"
           alt="Solar panels hero"
           className="w-full h-full object-cover"
         />
@@ -24,13 +26,13 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="flex w-fit hover:cursor-pointer items-center gap-2 bg-white text-gray-900 hover:bg-gray-100 font-semibold py-3 px-6 rounded-full transition-all">
+          <button className="flex w-fit hover:cursor-pointer items-center gap-2 bg-white text-gray-900 hover:scale-105 font-semibold py-3 px-6 rounded-full transition-all">
             <div className="w-6 h-6 rounded-full border-2 border-green-600 flex items-center justify-center">
               <FaPlay size={10} className="text-green-600 ml-0.5" />
             </div>
             Watch Our Story
           </button>
-          <button className="flex w-fit hover:cursor-pointer items-center gap-2 bg-transparent border border-gray-500 hover:border-white text-white font-semibold py-3 px-6 rounded-full transition-all">
+          <button className="flex w-fit hover:cursor-pointer items-center gap-2 bg-transparent border border-white hover:scale-105 text-white font-semibold py-3 px-6 rounded-full transition-all">
             Our Impact Report
           </button>
         </div>

@@ -23,7 +23,7 @@ export default function Testimonials() {
     <section className="bg-[#117a5e]/5 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
-          <h2 className="text-4xl font-extrabold text-gray-900 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold md:font-extrabold text-gray-900 text-center md:text-left">
             What Our Customers Say
           </h2>
           <div className="flex gap-4">

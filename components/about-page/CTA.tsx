@@ -15,7 +15,7 @@ export default function CTA() {
           energy. Whether you&apos;re a homeowner, business owner, or installer,
           we&apos;re here to help.
         </p>
-        <button className="bg-[#047857] hover:bg-[#036c4e] text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center gap-2 mx-auto">
+        <button className="bg-[#047857] hover:cursor-pointer hover:bg-[#036c4e] text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center gap-2 mx-auto">
           Get in Touch
           <FaArrowRight />
         </button>

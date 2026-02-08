@@ -20,7 +20,7 @@ const steps = [
     title: "Live Smarter",
     description:
       "Enjoy uninterrupted power, lower bills, and the satisfaction of a smaller carbon footprint from day one.",
-    active: false,
+    active: true,
   },
 ];
 
@@ -29,28 +29,28 @@ export default function HowItWorks() {
     <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-20 items-center">
         <div className="order-2 lg:order-1">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold md:font-extrabold text-gray-900 mb-12">
             How It Works
           </h2>
           <div className="space-y-12 relative">
             {/* Vertical Line */}
             <div className="absolute top-6 left-6 bottom-6 w-0.5 bg-slate-200">
-              <div className="w-full h-2/3 bg-[#117a5e] step-line-glow"></div>
+              <div className="w-full h-3/3 bg-[#117a5e] step-line-glow"></div>
             </div>
 
             {steps.map((step) => (
               <div key={step.id} className="flex gap-8 relative group">
                 <div
-                  className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 transition-all ${
+                  className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shrink-0 transition-all ${
                     step.active
                       ? "bg-[#117a5e] text-white shadow-lg shadow-[#117a5e]/30 group-hover:scale-110"
-                      : "bg-slate-200 text-slate-500 group-hover:bg-[#117a5e] group-hover:text-white"
+                      : "bg-slate-200 text-slate-500 hover:bg-[#117a5e] group-hover:text-white"
                   }`}
                 >
                   {step.id}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                     {step.title}
                   </h3>
                   <p className="text-slate-600 text-lg">{step.description}</p>
