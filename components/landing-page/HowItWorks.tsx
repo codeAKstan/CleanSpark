@@ -20,7 +20,7 @@ const steps = [
     title: "Live Smarter",
     description:
       "Enjoy uninterrupted power, lower bills, and the satisfaction of a smaller carbon footprint from day one.",
-    active: false,
+    active: true,
   },
 ];
 
@@ -35,16 +35,16 @@ export default function HowItWorks() {
           <div className="space-y-12 relative">
             {/* Vertical Line */}
             <div className="absolute top-6 left-6 bottom-6 w-0.5 bg-slate-200">
-              <div className="w-full h-2/3 bg-[#117a5e] step-line-glow"></div>
+              <div className="w-full h-3/3 bg-[#117a5e] step-line-glow"></div>
             </div>
 
             {steps.map((step) => (
               <div key={step.id} className="flex gap-8 relative group">
                 <div
-                  className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0 transition-all ${
+                  className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shrink-0 transition-all ${
                     step.active
                       ? "bg-[#117a5e] text-white shadow-lg shadow-[#117a5e]/30 group-hover:scale-110"
-                      : "bg-slate-200 text-slate-500 group-hover:bg-[#117a5e] group-hover:text-white"
+                      : "bg-slate-200 text-slate-500 hover:bg-[#117a5e] group-hover:text-white"
                   }`}
                 >
                   {step.id}

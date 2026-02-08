@@ -1,11 +1,13 @@
 import { FaPlay } from "react-icons/fa";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[600px] flex items-center justify-center text-white">
+    <section className="relative h-150 flex items-center justify-center text-white">
       <div className="absolute inset-0">
-        <img
-          src="/about-hero.jpeg"
+        <Image
+          fill
+          src="/Hero2.jpeg"
           alt="Solar panels hero"
           className="w-full h-full object-cover"
         />

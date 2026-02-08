@@ -5,7 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 const solutions = [
   {
     id: "1",
-    title: "Portable Lanterns",
+    title: "Portable Solar",
     tag: "From $49",
     tagColor: "bg-emerald-100 text-emerald-700",
     description:
@@ -77,7 +77,7 @@ export default function Solutions() {
 
             <div className="p-8">
               <div className="flex justify-between items-start mb-3">
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3 className="text-xl font-bold text-gray-900">
                   {item.title}
                 </h3>
                 <span
@@ -93,7 +93,7 @@ export default function Solutions() {
 
               <Link
                 href={`/shop/${item.id}`}
-                className="btn-scale block w-full bg-slate-100 hover:bg-[#117a5e] hover:text-white font-bold py-4 rounded-xl transition-colors text-center text-gray-900"
+                className="btn-scale block w-full bg-slate-100 group-hover:bg-[#117a5e] group-hover:text-white font-bold py-2 rounded-xl transition-colors text-center text-gray-900"
               >
                 {item.cta}
               </Link>

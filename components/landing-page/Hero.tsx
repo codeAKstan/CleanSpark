@@ -81,10 +81,10 @@ export default function Hero() {
       ref={containerRef}
       className="relative w-full h-screen"
     >
-      <div className="relative w-full h-full overflow-hidden flex items-center bg-slate-900 pt-20 md:pt-32">
+      <div className="relative w-full h-full overflow-hidden flex items-center bg-slate-900 pt-20">
         {/* Background Image */}
         <Image
-          src="/house.png"
+          src="/Hero2.png"
           alt="Modern solar home at dusk"
           fill
           className="w-full h-full object-cover"
@@ -92,7 +92,7 @@ export default function Hero() {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-black/50 via-black/30 to-transparent"></div>
 
         {/* Content */}
         <div
