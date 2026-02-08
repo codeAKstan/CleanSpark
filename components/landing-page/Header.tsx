@@ -59,8 +59,8 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/solar-home-systems"
-            className={navLinkClass("/solar-home-systems")}
+            href="/portable-solar"
+            className={navLinkClass("/portable-solar")}
           >
             Portables
           </Link>

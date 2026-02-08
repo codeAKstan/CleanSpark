@@ -52,7 +52,7 @@ export default function WhyCleanSpark() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`group animate-fade-in ${feature.delay} bg-white p-8 rounded-3xl text-center shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300`}
+              className={`group hover-lift animate-fade-in ${feature.delay} bg-white p-8 rounded-3xl text-center shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300`}
             >
               <div className="w-16 h-16 bg-emerald-50 text-[#117a5e] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 {feature.icon}

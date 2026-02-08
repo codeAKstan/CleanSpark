@@ -12,6 +12,7 @@ const solutions = [
       "Bright, reliable lighting that goes wherever you need it. Perfect for off-grid travel or home backup.",
     image: "/lantern_product_1770199426970.png",
     cta: "View Details",
+    link: "/portable-solar",
   },
   {
     id: "2",
@@ -22,6 +23,7 @@ const solutions = [
       "Full power for your home. Includes panels, batteries, and smart monitoring for total independence.",
     image: "/home_system_mockup_1770199442722.png",
     cta: "View Details",
+    link: "/solar-home-systems",
   },
   {
     id: "3",
@@ -32,6 +34,7 @@ const solutions = [
       "Scalable energy for commercial operations. Never lose a minute of production to power outages.",
     image: "/business_continuity_1770199467337.png",
     cta: "View Details",
+    link: "/shop",
   },
 ];
 
@@ -60,7 +63,7 @@ export default function Solutions() {
         {solutions.map((item, index) => (
           <div
             key={index}
-            className={`group hover-lift bg-white border border-slate-200 rounded-b-3xl overflow-hidden shadow-sm ${
+            className={`group bg-white border border-slate-200 rounded-b-3xl overflow-hidden shadow-sm ${
               index === 2
                 ? "lg:col-span-1 md:col-span-2 lg:md:col-span-1"
                 : ""
@@ -92,8 +95,8 @@ export default function Solutions() {
               </p>
 
               <Link
-                href={`/shop/${item.id}`}
-                className="btn-scale block w-full bg-slate-100 group-hover:bg-[#117a5e] group-hover:text-white font-bold py-2 rounded-xl transition-colors text-center text-gray-900"
+                href={item.link}
+                className="btn-scale block w-full bg-slate-100 group-hover:bg-[#117a5e] group-hover:text-white font-bold py-2 rounded-xl transition-colors duration-300 ease-in-out text-center text-gray-900"
               >
                 {item.cta}
               </Link>
