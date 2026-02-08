@@ -65,6 +65,10 @@ export default function Header() {
             Portables
           </Link>
 
+          <Link href="/locate-us" className={navLinkClass("/locate-us")}>
+            Locate Us
+          </Link>
+
           <Link href="/about-us" className={navLinkClass("/about-us")}>
             About Us
           </Link>
@@ -119,6 +123,22 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               For Homes
+            </Link>
+
+            <Link
+              href="/portable-solar"
+              className={mobileNavLinkClass("/portable-solar")}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Portables
+            </Link>
+
+            <Link
+              href="/locate-us"
+              className={mobileNavLinkClass("/locate-us")}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Locate Us
             </Link>
 
             <Link
