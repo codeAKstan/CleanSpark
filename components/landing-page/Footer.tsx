@@ -3,7 +3,7 @@ import { BsGlobeEuropeAfrica } from "react-icons/bs";
 import { LuAtSign } from "react-icons/lu";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiPaperAirplane } from "react-icons/hi2";
-import { MdBolt } from "react-icons/md";
+import Image from "next/image";
 
 const contacts = [
   { id: 1, icon: <BsGlobeEuropeAfrica size={20} /> },
@@ -18,7 +18,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-[#047857]">
-              <MdBolt size={30} />
+              <Image
+                src="/logo.png"
+                alt="Cleanspark logo"
+                width={30}
+                height={30}
+              />
               <span className="text-xl font-bold tracking-tight">
                 CleanSpark
               </span>
