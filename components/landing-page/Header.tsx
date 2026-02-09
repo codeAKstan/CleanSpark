@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MdBolt } from "react-icons/md";
+import Image from "next/image";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -34,7 +34,12 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <div className="text-[#047857]">
-            <MdBolt size={30} />
+            <Image
+            src="/logo.png"
+            alt="Cleanspark logo"
+            width={30}
+            height={30}
+            />
           </div>
           <span className="text-xl md:text-2xl font-extrabold text-[#047857] tracking-tight">
             CleanSpark
