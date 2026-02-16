@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/landing-page/Header";
 import Footer from "@/components/landing-page/Footer";
+import LiveChat from "@/components/LiveChat";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <LiveChat />
         <Footer />
       </body>
     </html>
